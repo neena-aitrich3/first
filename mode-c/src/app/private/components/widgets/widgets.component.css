@@ -1,0 +1,15 @@
+.widget-container
+{
+    display:flex;
+    align-items: space-between;
+}    .widget {
+        
+        border-radius:5px;
+        display: flex;
+        margin: 10px;
+        padding: 20px;
+         border: none;
+        align-items: center;
+    }
+
+  

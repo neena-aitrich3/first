@@ -1,0 +1,195 @@
+
+<app-sidenav></app-sidenav>
+<!-- <div *ngFor="let list of companyPending">
+
+    <h2>{{list.companyAddress}}</h2>
+    <h2>{{list.companyEmailAddress}}</h2>
+    <h2>{{list.companyName}}</h2>
+    <h2>{{list.emailAddress}}</h2>
+    <h2>{{list.firstname}}</h2>
+    <h2>{{list.id}}</h2>
+</div> -->
+
+
+<!-- <app-navbar></app-navbar> -->
+<!-- <app-sidebar></app-sidebar> -->
+<!-- <table>
+    <tr>
+        <th>name</th>
+    </tr>
+
+    <tr *ngFor="let list of companyPending">
+
+        <td>{{list.firstname}}</td>
+    </tr>
+</table> -->
+
+<div class="container mx-auto">
+<div class="container " style="margin-left:7.5%;"  >
+<div class="row ">
+  <div class="col-md-12">
+    <div class="table-responsive">
+      <table class="table mb-0 table-hover">
+        <thead>
+          <tr>
+           
+            <th scope="col" class="border-0 text-uppercase font-medium">Company</th>                          
+                          <th scope="col" class="border-0 text-uppercase font-medium">Address</th>                          
+                          <!-- <th scope="col" class="border-0 text-uppercase font-medium"> User-Name</th> -->
+                          <th scope="col" class="border-0 text-uppercase font-medium">Email ID</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+          <tr *ngFor="let list of companyactive | paginate:{
+
+            itemsPerPage:tableSize,
+            currentPage:page,
+            totalItems:count}; let i=index"  >
+            
+           
+           <!-- <td class="pl-4 text-capitalize ">{{list.firstName+" "+list.lastName}}</td>
+              <td class="pl-4">{{list.companyId}}</td>  -->
+            <td class="pl-4 text-primary "><b>{{list.companyName}}</b></td>                          
+            <td class="pl-4">{{list.companyAddress}}</td>
+            <td class="pl-4">{{list.emailAddress}}</td>
+            
+            <!-- <td class="pl-4">{{list.userName}}</td> -->
+            
+            <td>
+               <button id="btndel" type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2" ><i class="fa fa-trash"></i> </button> 
+               <button id="btnview" type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2" (click)="viewUser(content,list)"><i class="fa fa-eye"></i> </button>
+             
+              </td> 
+          </tr>                    
+            
+      
+        </tbody>
+      </table>
+    </div>
+    
+  </div>
+</div>
+    <div class="row">
+        <div class="col-md-12">
+           
+                  <h5 class="card-title text-uppercase mb-0 text-primary">Active Company List</h5>
+                <div class="table-responsive">
+                    <table class="table no-wrap user-table mb-0 table-hover">
+                      <thead>
+                        <tr>
+                          <!-- <th scope="col" class="border-0 text-uppercase font-medium pl-4"> </th>
+                          <th scope="col" class="border-0 text-uppercase font-medium"> Name</th> 
+                           <th scope="col" class="border-0 text-uppercase font-medium">Company ID</th> -->
+                          <th scope="col" class="border-0 text-uppercase font-medium">Company</th>                          
+                          <th scope="col" class="border-0 text-uppercase font-medium">Address</th>                          
+                          <!-- <th scope="col" class="border-0 text-uppercase font-medium"> User-Name</th> -->
+                          <th scope="col" class="border-0 text-uppercase font-medium">Email ID</th>
+                        
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                        <tr *ngFor="let list of companyactive | paginate:{
+
+                          itemsPerPage:tableSize,
+                          currentPage:page,
+                          totalItems:count}; let i=index"  >
+                          
+                         
+                         <!-- <td class="pl-4 text-capitalize ">{{list.firstName+" "+list.lastName}}</td>
+                            <td class="pl-4">{{list.companyId}}</td>  -->
+                          <td class="pl-4 text-primary "><b>{{list.companyName}}</b></td>                          
+                          <td class="pl-4">{{list.companyAddress}}</td>
+                          <td class="pl-4">{{list.emailAddress}}</td>
+                          
+                          <!-- <td class="pl-4">{{list.userName}}</td> -->
+                          
+                          <td>
+                             <!-- <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle"><i class="fa fa-key"></i> </button>  -->
+                             <!-- <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2" (click)="viewUser(content,list.id)"><i class="fa fa-eye"></i> </button>  -->
+                             <!-- <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2" (click)="acceptCompany(list.companyId,list.id)"><i class="fa fa-check"></i> </button>
+                             -->
+                             <button id="btndel" type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2" ><i class="fa fa-trash"></i> </button> 
+                             <button id="btnview" type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2" (click)="viewUser(content,list)"><i class="fa fa-eye"></i> </button>
+                           
+                            </td> 
+                        </tr>                    
+                          
+                    
+                      </tbody>
+                    </table>
+                </div>
+          </div>
+        </div>
+            <div>
+              <pagination-controls
+                previousLabel="Prev"
+                nextLabel="Next"
+                (pageChange) ="onTableDataChange($event)">
+              </pagination-controls>
+            </div>
+
+
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header" style="background-color: rgb(165, 165, 255);">
+      <h4 class="modal-title h4  text-capitalize" id="modal-basic-title">Active</h4>         
+      <div class="spinner-container">
+        <div class="spinner">
+          <div class="spinner">
+            <div class="spinner">
+              <div class="spinner">
+                <div class="spinner">
+                  <div class="spinner">   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button"  class="btn-close btn-light" aria-label="Close" (click)="d('Cross click')"></button>
+    </div>
+    <div class="modal-body ">
+  
+      <div class="row">
+  
+    
+     
+        <div class="col-md-4"> 
+          <img src="../assets/images/building2.jpg" alt="avatar"
+          class="rounded-circle img-fluid "  >
+         
+      </div>
+  
+        <div class="col-md-8 "> 
+          <h4 class="h3 text-capitalize" style="color:  rgb(24, 153, 245);" style="text-transform:capitalize;"><b>{{companyName}}</b></h4>   
+          <hr > 
+          <div class="  shadow">        
+          <p class="text-muted mb-2">Address :&nbsp;<span style="color:  rgb(24, 153, 245);">{{companyAddress}}</span></p></div>
+          <div class="  shadow">
+          <p class="text-muted mb-2">Email :&nbsp;<span style="color:  rgb(24, 153, 245);">{{emailAddress}}</span></p> </div>
+          <div class="  shadow">
+           <p class=" mb-2"></p></div>
+       
+         <!--  <p class="text-muted mb-4">City :&nbsp;{{city}}</p>  -->
+           
+        </div>
+        
+        <br>
+       
+   
+         </div> 
+        
+  </div>
+  
+  </ng-template>
+  <!-- <svg  class="icon" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg">
+<g fill="white" fill-rule="evenodd">
+<path fill="#6e9bdb" d="M43.4,-35.5C52,-23.8,52,-6,48,10.9C44.1,27.7,36.3,43.5,21.9,53.6C7.5,63.6,-13.7,67.9,-33.1,61.4C-52.5,54.8,-70.1,37.4,-77.3,15C-84.6,-7.4,-81.3,-34.8,-66.7,-47.9C-52.1,-61,-26,-59.7,-4.3,-56.2C17.4,-52.8,34.7,-47.2,43.4,-35.5Z" transform="translate(100 100)" />
+ </g>
+</svg> -->
+</div>
+       

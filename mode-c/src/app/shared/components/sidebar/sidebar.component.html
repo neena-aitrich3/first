@@ -1,0 +1,60 @@
+<div class="container-fluid"  style="width: 100%;">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-primary">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <!-- <h3 class="fs-5 d-none d-sm-inline text-white">MOD-C</h3> -->
+                    
+                </a>
+              
+                <nav id="sidebar" class="active " >   
+
+                    <div class="p-4 pt-5" data-bs-target="#sideb2">
+                    <!-- <h4 class="text-white h5"><b>DASHBOARD</b></h4> -->
+                    <ul class="list-unstyled components mb-5" >
+                        <li class="active" >
+                            <a href="#homeSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed text-white h6" >User Management</a>
+                            <ul class="list-unstyled collapse" id="sideb2" *ngFor="let user of users" >
+                            
+                            <ul>
+                                <a routerLink="../active-users" class="nav-link px-0 d-none d-sm-inline text-white">{{user.name1}} </a>
+                                <br>
+                                <a routerLink="../users-list" class="nav-link px-0 d-none d-sm-inline text-white">{{user.name2}} </a>
+                             
+                             </ul>
+                            
+                            </ul>
+                            </li>
+                        
+                    </ul>
+                   
+                   
+                    </div>
+                   </nav>
+                    <nav>
+                    <div >
+                        <ul class="list-unstyled components ">
+                        <li  >
+                            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed text-white h6" data-bs-target="#sideb1">Company Management</a>
+                            <ul class="list-unstyled collapse" id="sideb1" *ngFor="let company of companies" >
+                            
+                            <ul>
+                                <a routerLink="../company-activelist" class="nav-link px-0 d-none d-sm-inline text-white">{{company.name1}} </a>
+                                <br>
+                                <a routerLink="../company-pendinglist" class="nav-link px-0 d-none d-sm-inline text-white">{{company.name2}} </a>
+                             
+                             </ul>
+                            
+                            </ul>
+                            </li>                        
+                </ul>                  
+                    </div>
+                    </nav>
+                <hr>
+               
+            </div>
+        </div>
+       
+    </div>
+</div>
+

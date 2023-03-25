@@ -1,0 +1,153 @@
+<app-sidenav></app-sidenav>
+<!-- <div *ngFor="let list of companyPending">
+
+    <h2>{{list.companyAddress}}</h2>
+    <h2>{{list.companyEmailAddress}}</h2>
+    <h2>{{list.companyName}}</h2>
+    <h2>{{list.emailAddress}}</h2>
+    <h2>{{list.firstname}}</h2>
+    <h2>{{list.id}}</h2>
+</div> -->
+
+
+<!-- <app-navbar></app-navbar> -->
+<!-- <app-sidebar></app-sidebar> -->
+<!-- <table>
+    <tr>
+        <th>name</th>
+    </tr>
+
+    <tr *ngFor="let list of companyPending">
+
+        <td>{{list.firstname}}</td>
+    </tr>
+</table> -->
+
+<div class="container">
+<div class="container"   style="margin-left:100px;">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-uppercase mb-0 text-primary">Pending Users List</h5>
+                </div>
+                <div class="table-responsive">
+                    <table class="table no-wrap user-table mb-0 table-hover">
+                      <thead>
+                        <tr>
+                          <!-- <th scope="col" class="border-0 text-uppercase font-medium pl-4"> </th> -->
+                          <th scope="col" class="border-0 text-uppercase font-medium">Name</th>
+                          <th scope="col" class="border-0 text-uppercase font-medium">Role</th>
+                          <!-- <th scope="col" class="border-0 text-uppercase font-medium">Company ID</th> -->
+                          <th scope="col" class="border-0 text-uppercase font-medium">Company</th>                          
+                          <th scope="col" class="border-0 text-uppercase font-medium">Address</th>
+                          <th scope="col" class="border-0 text-uppercase font-medium">Email ID</th>
+                          
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let list of companyPending | paginate:{
+
+                          itemsPerPage:tableSize,
+                          currentPage:page,
+                          totalItems:count}; let i=index" >
+                          <!-- <td class="pl-4"> </td> -->
+                          <td class="pl-4">{{list.firstName+" "+list.lastName}}</td>
+                          <td class="pl-4">{{list.role}}</td>
+                          <!-- <td class="pl-4">{{list.companyId}}</td> -->
+                          <td class="pl-4">{{list.companyName}}</td>                          
+                          <td class="pl-4">{{list.companyAddress}}</td>
+                        
+                          <td class="pl-4">{{list.companyEmailAddress}}</td>
+                          
+                          
+                          <!-- <td class="pl-4">{{list.id}}</td> -->
+                        
+                          <td>
+                            <!-- <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle"><i class="fa fa-key"></i> </button> -->
+                             <!-- <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2" (click)="viewUser(content,list.id)"><i class="fa fa-eye"></i> </button> -->
+                            <button id="btncheck" routerlink="/company-activelist" type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2" (click)="acceptCompany(list.id)"><i class="fa fa-check"></i> </button>
+                            <button id="btnview" type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2" (click)="viewUser(content,list)"><i class="fa fa-eye"></i> </button>
+                            <button id="btndel" type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2"  (click)="deleteRequest(list.id)"><i class="fa fa-trash"></i> </button>
+                           
+                            </td>
+                        </tr>
+                       
+                          
+                    
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div>
+              <pagination-controls
+                previousLabel="Prev"
+                nextLabel="Next"
+                (pageChange) ="onTableDataChange($event)">
+              </pagination-controls>
+            </div>
+        </div>
+</div>
+</div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header" style="background-color: rgb(165, 165, 255);">
+    <h4 class="modal-title h4  text-capitalize" id="modal-basic-title">Hi There</h4>         
+    <div class="spinner-container">
+      <div class="spinner">
+        <div class="spinner">
+          <div class="spinner">
+            <div class="spinner">
+              <div class="spinner">
+                <div class="spinner">   
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button"  class="btn-close btn-light" aria-label="Close" (click)="d('Cross click')"></button>
+  </div>
+  <div class="modal-body container">
+
+    <div class="row">
+
+  
+   
+      <div class="col-md-4"> 
+        <img src="../assets/images/building2.jpg" alt="avatar"
+        class="rounded-circle img-fluid "  >
+       
+    </div>
+
+      <div class="col-md-8 "> 
+        <h4 class=" h3  text-capitalize" style="color:  rgb(24, 153, 245);"><b>{{companyName}}&nbsp;&nbsp;&nbsp;</b>(<span class="h5 " style="color: red;" >Pending...!</span>)</h4>   
+        <hr > 
+        <div class="  shadow">        
+        <p class="text-muted mb-2">Address :&nbsp;{{companyAddress}}</p></div>
+        <div class="  shadow">
+        <p class="text-muted mb-2">Email :&nbsp;{{companyEmailAddress}}</p> </div>
+        <div class="  shadow">
+        <p class="text-muted mb-2">Registered By :&nbsp;{{firstName+" "+lastName}} ({{role}})</p> 
+       <p class=" mb-2"></p></div>
+     
+       <!--  <p class="text-muted mb-4">City :&nbsp;{{city}}</p>  -->
+          <div class="d-flex justify-content-center mb-2" >
+            <!-- <button type="button" class="btn btn-primary" >Accept</button>&nbsp;
+            <button type="button" class="btn btn-primary" (click)="accept(id)">Accept</button>&nbsp;
+            <button type="button" class="btn btn-primary mr-2">Reject</button> -->
+        </div>
+      </div>
+      
+      <br>
+     
+ 
+       </div> 
+</div>
+
+</ng-template>
+</div>      

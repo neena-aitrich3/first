@@ -1,0 +1,148 @@
+{
+  "adminLogin": [
+    {
+      "email": "shini@gmail.com",
+      "password": "shini"
+    }
+  ],
+  "pendingRequests": [
+    {
+      "id": 1,
+      "name": "Aswathy",
+      "country": "india",
+      "state": "kerala",
+      "city": "Thrissue",
+      "phone": 9578624386,
+      "image": "src/assets/images/img2.png"
+    },
+    {
+      "id": 2,
+      "name": "sreerama",
+      "country": "india",
+      "state": "kerala",
+      "city": "Kozhikode",
+      "phone": 9645236679,
+      "image": "src/assets/images/img2.png"
+    }
+  ],
+  "activeUsers": [
+    {
+      "id": 1,
+      "name": "James",
+      "country": "india",
+      "state": "kerala",
+      "city": "Kozhikode",
+      "phone": 9645236679,
+      "image": "src/assets/images/image1.png"
+    },
+    {
+      "id": 2,
+      "name": "Riya",
+      "country": "india",
+      "state": "kerala",
+      "city": "Kozhikode",
+      "phone": 9645236679,
+      "image": "src/assets/images/image.png"
+    },
+    {
+      "id": 3,
+      "name": "Nimal",
+      "country": "india",
+      "state": "kerala",
+      "city": "Peechi",
+      "phone": 9645875679,
+      "image": "src/assets/images/img2.png"
+    }
+  ],
+  "companypendingrequests": [
+    {
+      "id": 1,
+      "cname": "aaa infotech",
+      "cusername": "aaa123",
+      "caddress": "india",
+      "emailid": "aaa@gmail.com",
+      "phoneno": "9745632145",
+      "userid":"11111",
+      "username":"Mathew K R",
+      "password":"mathew123",
+      "role":"HR"
+     
+    },
+    {
+      "id": 2,
+      "cname": "bbb infotech",
+      "cusername": "aaa123",
+      "caddress": "india",
+      "emailid": "bbb123",
+      "phoneno": "9745632145",
+      "userid":"11111",
+      "username":"Mathew K R",
+      "password":"mathew123",
+      "role":"HR"
+     
+    },
+    {
+      "id":3 ,
+      "cname": "ccc infotech",
+      "cusername": "bbb123",
+      "caddress": "india",
+      "emailid": "ccc@gmail.com",
+      "phoneno": "9745632145",
+      "userid":"11111",
+      "username":"Mathew K R",
+      "password":"mathew123",
+      "role":"HR"
+     
+    }
+  ],
+  "companyactiveRequests": [
+    {
+      "id": 1,
+      "cname": "ddd infotech",
+      "cusername": "ddd123",
+      "caddress": "india",
+      "emailid": "ddd@gmail.com",
+      "phoneno": "9745632145",
+      "userid":"11111",
+      "username":"Mathew K R",
+      "password":"mathew123",
+      "role":"HR"
+
+    },
+    {
+      "id": 2,
+      "cname": "eee infotech",
+      "cusername": "eee123",
+      "caddress": "india",
+      "emailid": "eee@gmail.com",
+      "phoneno": "9745632145",
+      "userid":"11111",
+      "username":"Mathew K R",
+      "password":"mathew123",
+      "role":"manager"
+    },
+    {
+      "id": 3,
+      "cname": "fff infotech",
+      "cusername": "fff123",
+      "caddress": "india",
+      "emailid": "fff@gmail.com",
+      "phoneno": "9745632145",
+      "userid":"11111",
+      "username":"Mathew K R",
+      "password":"mathew123",
+      "role":"Ass.Manager"
+    },
+    {
+      "id": 4,
+      "cname": "ggginfotech",
+      "cusername": "ggg123",
+      "caddress": "india",
+      "emailid": "ggg@gmail.com",
+      "phoneno": "9745632145",
+      "userid":"11111",
+      "username":"Mathew K R",
+      "password":"mathew123",
+      "role":"HR"
+    }]
+}

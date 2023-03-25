@@ -1,0 +1,41 @@
+#btnview {
+    background-color: #1c87c9;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  border: none;
+  color: #eeeeee;
+    cursor: pointer;   
+    font-size: 20px;    
+    text-align: center;  
+  }
+  #btndel {
+    background-color: #1c87c9;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  border: none;
+  color: #eeeeee;
+    cursor: pointer; 
+    font-size: 20px;    
+    text-align: center;  
+  }
+  /* .icon
+{
+    position: absolute;
+   top: 0;
+    margin-top: 140px;
+    margin-left: 10px;
+    z-index: 1;
+    fill-opacity: 0.4; 
+  
+}
+.icon1
+{
+    position: absolute;
+   top: 0;
+   left: 0;
+    margin-top: 80px;
+    margin-left: 990px;
+    z-index: 1;
+    fill-opacity: 0.3; 
+  
+} */

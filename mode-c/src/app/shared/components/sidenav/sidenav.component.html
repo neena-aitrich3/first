@@ -1,0 +1,106 @@
+<nav class="navbar navbar-expand-lg navbar-light  p-3" style="background: linear-gradient(to bottom right, #1B4F6C, #9DE2F2);">
+    <div class="container-fluid">
+      <div>
+        <ul id="ul1">
+          <li class="liclass">M</li>
+          <li class="liclass">O</li>
+          <li class="liclass">D</li>
+         <li class="liclass">-</li>
+          <li class="liclass">C</li>
+        </ul>
+      </div>
+     
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" (click)="getDetails()">
+        <span class="navbar-toggler-icon"></span>
+        <p style="color:white"><i class="fa fa-user">&nbsp;&nbsp;&nbsp;&nbsp;{{username}}</i></p>
+                  
+      </button>
+   
+      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+<!--       
+        <ul class="navbar-nav ms-auto  d-lg-inline-flex">
+            <li class="nav-item dropdown">
+                <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 <img src="assets/images/icon.png">
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                 <li><a></a></li>
+                  <li><a class="dropdown-item" href="#" routerLink="../dashboard" ><i class="fa fa-info">Dashboard</i></a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-bell-o">Notifications</i></a></li>
+                  <li><a class="dropdown-item" href="#"  (click)="logout()"><i class="fa fa-sign-out">Logout</i></a></li>
+                </ul>
+              </li>
+              
+        
+        </ul> -->
+        <ul class="list-unstyled components ms-auto  d-lg-inline-flex">
+     
+                   <li class="active">
+                    <a href="#foodSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> 
+                      <img src="assets/images/icon.png">
+                    </a>
+                    <ul class="collapse list-unstyled" id="foodSubmenu1">
+                      <li ><a routerLink="../dashboard" style="color: black;" ><i class="bi bi-speedometer2">Dashboard</i></a></li>
+                      
+                      <li><a (click)="logout()" style="cursor:pointer;"><b>Logout</b></a></li>
+                      </ul>
+                      </li>
+                
+              </ul>
+      </div>
+      
+    </div>
+  </nav>
+  <div class="sidebar">
+  
+  <!-- 
+  <a class="collapsed " data-bs-toggle="collapse" data-bs-target="#dashboard-collapse">User Management
+    <div class="collapse" id="dashboard-collapse">
+        <ul class="btn-toggle-nav  fw-normal pb-1 small">
+          <li><a href="#" class="rounded" routerLink="../usersList">Active List</a></li>
+          
+                             
+          <li><a href="#" class="rounded">Pending List</a></li>
+          
+          
+        </ul>
+      </div>
+ </a>
+ 
+ <a class="collapsed " data-bs-toggle="collapse" data-bs-target="#dashboard-collapse2">Company Management
+  <div class="collapse" id="dashboard-collapse2">
+      <ul class="btn-toggle-nav  fw-normal pb-1 small">
+        <li><a href="#" class="rounded" routerLink="../usersList">Active List</a></li>
+        
+                           
+        <li><a href="#" class="rounded">Pending List</a></li>
+        
+        
+      </ul>
+    </div>
+</a> -->
+
+<ul class="list-unstyled components">
+  <li routerLink="../companyDashboard">Dashboard</li>
+           <!-- <li class="active">
+            <a href="#foodSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">User Management</a>
+            <ul class="collapse lisst-unstyled" id="foodSubmenu5">
+              <li><a routerLink="../active-users">Active List</a></li>
+              <li><a routerLink="../users-list">Pending List</a></li>
+              </ul>
+          </li> -->
+        
+      </ul>
+<ul class="list-unstyled components">
+ 
+           <li class="active">
+            <a href="#foodSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Company Management</a>
+            <ul class="collapse lisst-unstyled" id="foodSubmenu">
+              <li><a routerLink="../company-activelist">Active List</a></li>
+              <li><a routerLink="../company-pendinglist">Pending List</a></li>
+              </ul>
+          
+      </ul>
+  
+</div>
+

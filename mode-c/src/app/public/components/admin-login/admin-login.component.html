@@ -1,0 +1,64 @@
+<section class="vh-100" style="background-color: #8fc4b7;">
+  <div class="container py-5 h-100">
+    <div class="card rounded-3 text-black p-md-5">
+      <div class="row d-flex align-items-center justify-content-center h-100">
+
+        
+          <div class="col-md-6 col-lg-7 col-xl-6">
+
+            <img src="assets/images/scientists.jpeg" style="width: 45px;height:40px;border-radius: 50px; " class="img-fluid"
+              style="background-color: #cdd3d1;" alt="Phone image">
+          </div>
+          <div class="col-md-6 col-lg-5 col-xl-5 offset-xl-1">
+           
+           
+            <h2 class="fs-title" style="text-align: center;">MOD-C Management</h2>
+            <br>
+           <h6 class="h6" ><b>Admin Login</b></h6>
+            
+           <form [formGroup]="adminLogin" (ngSubmit)="onSubmit()">
+             
+  
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="text" formControlName="email"  class="form-control" placeholder="email" />
+            
+              <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
+                <div *ngIf="f['email'].errors && f['email'].errors['pattern']">invalid email</div>
+            </div>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <input type="password" formControlName="password"  id="admin-password" class="form-control" placeholder="password" />
+              <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+                <div *ngIf="f['password'].errors && f['password'].errors['required']">Password is required.</div>
+                </div>
+             
+            </div>
+
+            <!-- Checkbox -->
+            <div class="form-check d-flex justify-content-center mb-4">
+              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33"  />
+              <label class="form-check-label" for="form2Example33">
+                Remeberme
+              </label>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4">
+              Login
+            </button>
+
+          </form>
+           
+          
+            
+           
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>

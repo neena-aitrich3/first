@@ -1,0 +1,88 @@
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background: linear-gradient(to bottom right, #1B4F6C, #9DE2F2);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+ 
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active)  {
+  background-color: #1B4F6C;
+  color: white;
+}
+
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+#ul1
+{
+display: flex;
+list-style: none;;
+}
+#ul1 .liclass{
+  font-size: 40px;
+  color: #7f7f7f;
+  font-weight: bold;
+  margin: 0 2px;
+  animation: neonTxt 2s ease-in-out infinite  ;
+}
+#ul1 .liclass:nth-child(2){ animation-delay: 1s;}
+#ul1 .liclass:nth-child(3){ animation-delay: 2s;}
+#ul1 .liclass:nth-child(4){ animation-delay: 3s;}
+#ul1 .liclass:nth-child(5){ animation-delay: 4s;}
+#ul1 .liclass:nth-child(6){ animation-delay: 5s;}
+#ul1 .liclass:nth-child(7){ animation-delay: 6s;}
+@keyframes neonTxt {
+  0%, 5%{
+    color: #9DE2F2;
+    text-shadow: 0 0 8px #9a9a9a;
+  }
+  20%, 100%{
+    color: #769393;
+  }
+  30%, 100%{
+    text-shadow: none;
+  }
+  
+}

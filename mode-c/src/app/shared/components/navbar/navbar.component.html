@@ -1,0 +1,39 @@
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary" >
+      <div>
+        <ul id="ul1">
+          <li class="liclass">M</li>
+          <li class="liclass">O</li>
+          <li class="liclass">D</li>
+          <li class="liclass">E</li>
+          <li class="liclass">-</li>
+          <li class="liclass">C</li>
+        </ul>
+      <!-- </div> <h3 class="text-white"> MOD-C Management</h3> -->
+       
+
+       
+        <div class="collapse navbar-collapse" id="navbarCollapse" style="margin-left:65%;" >
+            <div class="dropdown">
+                <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="getDetails()">
+                  <!-- <tr>
+                    <img src="assets/images/icon.png" style="width: 45px;height:40px;border-radius: 50px; ">
+                    <p>{{username}}</p>
+                  </tr> -->
+                    
+                  <p style="color:white"><i class="fa fa-user">&nbsp;&nbsp;&nbsp;&nbsp;{{username}}</i></p>
+                  
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+                  <!-- <a class="dropdown-item" ><i class="fa fa-user">&nbsp;&nbsp;&nbsp;&nbsp;{{username}}</i></a> -->
+                  <a class="dropdown-item" ><i class="fa fa-bell-o">&nbsp;&nbsp;&nbsp;&nbsp;Notification</i></a>
+                  <a  routerLink="../dashboard" class="dropdown-item" ><i class="fa fa-info"> &nbsp;&nbsp;&nbsp;&nbsp;Dashboard</i></a>
+                  <a class="dropdown-item" (click)="logout()"><i class="fa fa-sign-out">&nbsp;&nbsp;&nbsp;&nbsp;Logout</i></a>
+                </div>
+              </div>   
+        </div>
+ 
+
+ 
+
+ 

@@ -1,0 +1,99 @@
+<app-sidenav></app-sidenav>
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-uppercase mb-0 text-primary">Pending Users List</h5>
+                </div>
+                <div class="table-responsive">
+                    <table class="table no-wrap user-table mb-0">
+                      <thead>
+                        <tr>
+                          <!-- <th scope="col" class="border-0 text-uppercase font-medium pl-4"> </th> -->
+                          <th scope="col" class="border-0 text-uppercase font-medium">USERNAME</th>
+                          <th scope="col" class="border-0 text-uppercase font-medium">FIRSTNAME</th>
+                          <th scope="col" class="border-0 text-uppercase font-medium">LASTNAME</th>
+                          <th scope="col" class="border-0 text-uppercase font-medium">COUNTRY</th>
+                          <th scope="col" class="border-0 text-uppercase font-medium">PHONE</th>
+                          <th scope="col" class="border-0 text-uppercase font-medium">Manage</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let list of pendingRequests | paginate:{
+
+                          itemsPerPage:tableSize,
+                          currentPage:page,
+                          totalItems:count}; let i=index" >
+                          <!-- <td class="pl-4"> </td> -->
+                          <td class="pl-4">{{list.userName}}</td>
+                          <td class="pl-4">{{list.userName}}</td>
+                          <td class="pl-4">{{list.userName}}</td>
+                          <td class="pl-4">KERALA</td>
+                          <td class="pl-4">{{list.phoneNo}}</td>
+                        
+                          <td>
+                            <!-- <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle"><i class="fa fa-key"></i> </button> -->
+                            <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2" (click)="deleteRequest(list.id,false)"><i class="fa fa-trash"></i> </button>
+                            <!-- <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2" (click)="viewUser(content,list.id)"><i class="fa fa-eye"></i> </button> -->
+                            <button type="button" class="btn btn-outline-info btn-circle btn-lg btn-circle ml-2" (click)="deleteRequest(list.id,true)"><i class="fa fa-check"></i> </button>
+                          </td>
+                        </tr>
+                       
+                          
+                    
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div>
+              <pagination-controls
+                previousLabel="Prev"
+                nextLabel="Next"
+                (pageChange) ="onTableDataChange($event)">
+              </pagination-controls>
+            </div>
+        </div>
+
+       
+   
+
+        <ng-template #content let-c="close" let-d="dismiss">
+          <div class="modal-header" style="background-image: url(assets/images/imgb.jpg)">
+            <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+            <button type="button"  class="btn-close btn-light" aria-label="Close" (click)="d('Cross click')"></button>
+          </div>
+          <div class="modal-body">
+    
+            <div class="row">
+
+               <div class="col-md-12 align-item-center">
+              
+              
+              <div class="card-body text-center">
+                <img src="../assets/images/icon.png" alt="avatar"
+                  class="rounded-circle img-fluid"  style="width: 180px; border-radius: 10px;">
+                <!-- <h5 class="my-3">{{userById.name}}</h5> -->
+                <!-- <p class="text-muted mb-1">Country :&nbsp;{{userById.country}}</p>
+                <p class="text-muted mb-4">State :&nbsp;{{userById.state}}</p> -->
+                <!-- <p class="text-muted mb-4">City :&nbsp;{{userById.city}}</p> -->
+                <div class="d-flex justify-content-center mb-2">
+                  <button type="button" class="btn btn-primary" (click)="accept(id)">Accept</button>&nbsp;
+                  <button type="button" class="btn btn-primary mr-2">Reject</button>
+                 
+                </div>          
+                           
+           </div>
+              <br>
+              <hr>
+             </div>
+               </div>          
+       
+        </div>
+       
+        </ng-template>
+     
+   

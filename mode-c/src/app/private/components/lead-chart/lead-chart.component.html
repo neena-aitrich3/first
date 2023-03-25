@@ -1,0 +1,15 @@
+<!-- <h5><u><b>User Management Details</b></u></h5>
+<div class=" chart-container p-3 bg-white shadow mb-5  d-flex justify-content-around  rounded" id="divChart">
+    <div class="chart">
+        <canvas id="myChart"></canvas>
+    </div>
+</div> -->
+<h5 class="h5"><u><b>Lead Chart</b></u></h5>
+<select class="form-select"  name="Ppub" #selectid value="" (change)="viewDay($event)"  >
+    <option *ngFor="let entity of entities; let i = index"
+    value="{{entity.name}}" [selected]="i == 0 ? true : null" 
+    (onload)="fooFunction(i, entity.name)"> {{entity.name}}</option>
+   
+  </select>
+<canvas #canvas id="myChart1" baseChart width="500" height="300" ></canvas>
+  
