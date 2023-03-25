@@ -1,0 +1,17 @@
+.me2 {
+    float: right;
+    shape-outside: url('/assets/gallery/tre2-p.png');
+   
+    transform: translateX(16px);
+    
+  }
+  .main1{
+    animation: 12s autoplay2 infinite ease-in-out
+  }
+  @keyframes autoplay2 {
+    0% {top: 100%}
+    4% {top: 0%}
+    33.33% {top: 0%}
+    37.33% {top: -100%}
+    100% {top: -100%}
+  }

@@ -1,0 +1,117 @@
+
+/* Transition after scrolling */
+.navbar{
+  transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+/* Transition to the initial state */
+.navbar-before-scroll {
+  transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+
+
+.carousel img {
+      width: 100vw;
+      height: 30vh;
+      object-fit: cover;
+    }
+    
+    .carousel-caption {
+      display: flex;
+      align-items: left;
+      color: #212529;
+      justify-content: center;
+  
+     
+      text-shadow: 0 2px 2px ;
+      /* font-family: 'Moon Dance',cursive; */
+      animation: 5s anim-lineUp ease-out infinite;
+ 
+    }
+    @keyframes anim-lineUp {
+        0% {
+            opacity: 0;
+            transform: translateY(80%);
+          }
+          20% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+            transform: translateY(0%);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0%);
+          }
+        
+      }
+      .navbar-nav a{
+        font-family: 'Moon Dance',cursive;
+        
+      }
+      img{
+        -webkit-mask-image: linear-gradient(black, purple, yellow, transparent);
+        mask-image: linear-gradient(black, purple, yellow, transparent);
+        -webkit-mask-mode: luminance;
+        mask-mode: luminance;
+      }
+ .image1{
+  position: relative;
+  width: 100%;
+  min-height:40vh ;
+  background-size: cover;
+  background-image: url('/assets/imgs/butterfly-safari.jpg');
+ }
+ .image1:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100% ;
+  background-size: 100%;
+  background-image: url('/assets/imgs/brush-stroke.png');
+  background-position: center;
+  mix-blend-mode: screen;
+ }
+ .image2{
+  position: relative;
+  width: 100%;
+  min-height:60vh ;
+  background-size: cover;
+  background-image: url('/assets/imgs/bird-safari.jpg');
+ }
+ .image2:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100% ;
+  background-size: 100%;
+  background-image: url('/assets/imgs/brush-stroke.png');
+  background-position: center;
+  mix-blend-mode: screen;
+ }
+
+ .image3{
+  position: relative;
+  width: 115%;
+  min-height:45vh ;
+  background-size: cover;
+  background-image: url('/assets/imgs/boat1.jpg');
+ }
+ .image3:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100% ;
+  background-size: 100%;
+  background-image: url('/assets/imgs/brush-stroke.png');
+  background-position: center;
+  mix-blend-mode: screen;
+ }
